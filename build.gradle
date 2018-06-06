@@ -1,0 +1,79 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    repositories {
+        google()
+        jcenter()
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.1.1'
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+    }
+}
+
+// allprojects.each { p ->
+//    p.buildDir "build-tmp-out"
+//}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+// define the ext
+ext {
+    minSdkVersion = 19
+    targetSdkVersion = 27
+    compileSdkVersion = 27
+    buildToolsVersion = "27.0.3"
+    supportLibVersion = "27.0.1"
+
+    // this is platform os
+    isWindowOs = org.gradle.internal.os.OperatingSystem.current().isWindows()
+
+    // root directory string
+    rootDirStr = rootDir.getAbsolutePath()
+
+    // common directory string
+    commonDirStr = rootDirStr + (isWindowOs ? "\\common\\" : "/common/")
+
+    // common aidl directory string
+    mainAidlDirStr = commonDirStr + (isWindowOs ? "aidl\\" : "aidl/")
+
+
+    dependencies = [
+            // gson
+            "gson"         : "com.google.code.gson:gson:2.8.0",
+
+            // okhttp
+            "okhttp"       : "com.squareup.okhttp3:okhttp:3.10.0",
+            // okio
+            "okio"         : "com.squareup.okio:okio:1.14.0",
+
+            // simple-xml
+            "simple-xml"   : "org.simpleframework:simple-xml:2.7.1",
+
+            // support-annotations
+            "support-annot": "com.android.support:support-annotations:${supportLibVersion}",
+
+            // appcompat-v7
+            "appcompat-v7"   : "com.android.support:appcompat-v7:${supportLibVersion}",
+
+            // support-v4
+            "support-v4"   : "com.android.support:support-v4:${supportLibVersion}",
+
+            // recyclerview-v7
+            // "recyclerview-v7": "com.android.support:recyclerview-v7:${supportLibVersion}",
+
+            // converter-simplexml
+            // "c-simplexml"    : "com.squareup.retrofit2:converter-simplexml:2.3.0",
+    ]
+}
+
+

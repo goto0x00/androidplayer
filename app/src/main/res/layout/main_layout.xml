@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.constraint.Guideline
+        android:id="@+id/gl_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.03" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/gl_left_centre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.50" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/gl_left_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/gl_top_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.70" />
+
+    <Button
+        android:id="@+id/btnLeft"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Left Click"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toStartOf="@+id/gl_left_centre"
+        app:layout_constraintStart_toStartOf="@+id/gl_left"
+        app:layout_constraintTop_toTopOf="@+id/gl_top_bottom" />
+
+    <Button
+        android:id="@+id/btnBind"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Bind Click"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toStartOf="@+id/gl_left_centre"
+        app:layout_constraintStart_toStartOf="@+id/gl_left"
+        app:layout_constraintTop_toBottomOf="@+id/btnLeft" />
+
+    <Button
+        android:id="@+id/btnRight"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Right Click"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toStartOf="@+id/gl_left_right"
+        app:layout_constraintStart_toEndOf="@+id/gl_left_centre"
+        app:layout_constraintTop_toTopOf="@+id/gl_top_bottom" />
+
+    <Button
+        android:id="@+id/btnUnBind"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="UnBind Click"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toStartOf="@+id/gl_left_right"
+        app:layout_constraintStart_toEndOf="@+id/gl_left_centre"
+        app:layout_constraintTop_toBottomOf="@+id/btnRight" />
+
+    <ScrollView
+        android:id="@+id/sv_left"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/gl_top_bottom"
+        app:layout_constraintEnd_toStartOf="@+id/gl_left_centre"
+        app:layout_constraintStart_toStartOf="@+id/gl_left"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp">
+
+            <RadioButton
+                android:id="@+id/rbLeft_0x01"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:layout_margin="5dp"
+                android:text="0x01" />
+
+            <RadioButton
+                android:id="@+id/rbLeft_0x02"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:layout_margin="5dp"
+                android:text="0x02" />
+
+            <RadioButton
+                android:id="@+id/rbLeft_0x03"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:layout_margin="5dp"
+                android:text="0x03" />
+
+            <RadioButton
+                android:id="@+id/rbLeft_0x04"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:layout_margin="5dp"
+                android:text="0x04" />
+
+            <RadioButton
+                android:id="@+id/rbLeft_0x05"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:layout_margin="5dp"
+                android:text="0x05" />
+
+            <RadioButton
+                android:id="@+id/rbLeft_0x06"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:layout_margin="5dp"
+                android:text="0x06" />
+
+            <!--
+            <RadioButton
+                android:id="@+id/rbLeft_0x07"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:layout_margin="5dp"
+                android:text="0x07" />
+
+            <RadioButton
+                android:id="@+id/rbLeft_0x08"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:layout_margin="5dp"
+                android:text="0x08" />
+
+            <RadioButton
+                android:id="@+id/rbLeft_0x09"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:layout_margin="5dp"
+                android:text="0x09" />
+
+            <RadioButton
+                android:id="@+id/rbLeft_0x0A"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:layout_margin="5dp"
+                android:text="0x0A" />
+
+            <RadioButton
+                android:id="@+id/rbLeft_0x0B"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:layout_margin="5dp"
+                android:text="0x0B" />
+
+            <RadioButton
+                android:id="@+id/rbLeft_0x0C"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:layout_margin="5dp"
+                android:text="0x0C" />
+
+            <RadioButton
+                android:id="@+id/rbLeft_0x0D"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:layout_margin="5dp"
+                android:text="0x0D" />
+
+            <RadioButton
+                android:id="@+id/rbLeft_0x0E"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:layout_margin="5dp"
+                android:text="0x0E" />
+
+            <RadioButton
+                android:id="@+id/rbLeft_0x0F"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:layout_margin="5dp"
+                android:text="0x0F" />
+           -->
+
+        </RadioGroup>
+
+    </ScrollView>
+
+    <ScrollView
+        android:id="@+id/sv_right"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/gl_top_bottom"
+        app:layout_constraintEnd_toStartOf="@+id/gl_left_right"
+        app:layout_constraintStart_toStartOf="@+id/gl_left_centre"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/rb_right_0x01"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:layout_margin="5dp"
+                android:text="加载插件" />
+
+            <RadioButton
+                android:id="@+id/rb_right_0x02"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:layout_margin="5dp"
+                android:text="启动Factory测试界面" />
+
+            <RadioButton
+                android:id="@+id/rb_right_0x03"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:layout_margin="5dp"
+                android:text="text 0x03" />
+
+            <RadioButton
+                android:id="@+id/rb_right_0x04"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:layout_margin="5dp"
+                android:text="text 0x04" />
+
+        </RadioGroup>
+
+    </ScrollView>
+
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,11 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="dai.android.core.router">
+
+    <application>
+        <!--
+        <service
+            android:name=".remote.ConnectRouterWideService"
+            android:process="d_a_router_wide" />
+            -->
+    </application>
+</manifest>

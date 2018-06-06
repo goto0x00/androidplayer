@@ -1,0 +1,15 @@
+//
+// main setting.gradle
+// one line one module
+//
+
+include ':libcore'
+
+include ':virtual:libAndroidStub'
+include ':virtual:libVirtual'
+//include ':virtual:plugin'
+
+include ':librouter'
+include ':libplayer'
+
+include ':app'
